@@ -1,0 +1,25 @@
+/*
+ * ultrasonic.c
+ *
+ *  Created on: Oct 12, 2021
+ *      Author: Fayrouz
+ */
+
+
+#include "ultrasonic.h"
+#include "common_macros.h" /* To use the macros like SET_BIT */
+#include "gpio.h"
+#include "icu.h"
+
+
+/* Description
+* Initialize the ICU driver as required.
+* Setup the ICU call back function.
+*Setup the direction for the trigger pin as output pin through the GPIO driver.
+*/
+void Ultrasonic_init(void)
+{
+	Icu_ConfigType ICU_Config = {F_CPU_8,RISING};
+	 Icu_init( & ICU_Config)
+
+}

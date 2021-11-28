@@ -1,0 +1,43 @@
+/*
+ * project.c
+ *
+ *  Created on: Oct 12, 2021
+ *      Author: Fayrouz
+ */
+
+
+
+#include "ultrasonic.h"
+#include "gpio.h"
+#include "icu.h"
+#include"lcd.h"
+#include <util/delay.h> /* For the delay functions */
+#include <avr/io.h> /* To use the SREG register */
+
+extern uint8 g_edgeCount;
+extern uint16 g_timeHigh ;
+extern uint16 g_timePeriod ;
+extern uint16 g_timePeriodPlusHigh ;
+int main(void)
+{
+	SREG |= (1<<7);	  /* Enable Global Interrupt I-Bit */
+	uint16 distance;
+	LCD_init();
+	Ultrasonic_init();
+	GPIO_setupPinDirection( Echo_Port,Echo_Pin,PIN_INPUT);
+
+	LCD_displayStringRowColumn(0,0,"Distance =");
+	while (1)
+	{
+		distance=Ultrasonic_readDistance()+1;
+		LCD_moveCursor(1, 10);
+		LCD_intgerToString(distance);
+		if(g_edgeCount == 4)
+		{
+			Icu_DeInit(); /* Disable ICU Driver */
+			g_edgeCount = 0;
+
+		}
+
+	}
+}

@@ -1,0 +1,27 @@
+/*
+ * project.c
+ *
+ *  Created on: Oct 12, 2021
+ *      Author: Fayrouz
+ */
+
+
+
+#include "ultrasonic.h"
+#include "gpio.h"
+#include "icu.h"
+#include"lcd.h"
+#include <util/delay.h> /* For the delay functions */
+
+int main(void)
+{
+	LCD_init();
+	Ultrasonic_init();
+
+	LCD_displayStringRowColumn(0,0,"Distance =");
+	while (1)
+	{
+		LCD_displayStringRowColumn(0,12,"");
+
+	}
+}

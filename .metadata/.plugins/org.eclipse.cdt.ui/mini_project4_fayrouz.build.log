@@ -1,0 +1,15 @@
+22:32:18 **** Incremental Build of configuration Debug for project mini_project4_fayrouz ****
+make all 
+Building file: ../Ultrasonic.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"Ultrasonic.d" -MT"Ultrasonic.o" -c -o "Ultrasonic.o" "../Ultrasonic.c"
+In file included from ../Ultrasonic.c:8:
+c:/winavr-20100110/lib/gcc/../../avr/include/util/delay.h:90:3: warning: #warning "Compiler optimizations disabled; functions from <util/delay.h> won't work as designed"
+../Ultrasonic.c: In function 'Ultrasonic_readDistance':
+../Ultrasonic.c:68: error: expected '=', ',', ';', 'asm' or '__attribute__' before '{' token
+../Ultrasonic.c:70: error: expected '{' at end of input
+make: *** [Ultrasonic.o] Error 1
+"make all" terminated with exit code 2. Build might be incomplete.
+
+22:32:18 Build Failed. 3 errors, 1 warnings. (took 346ms)
+

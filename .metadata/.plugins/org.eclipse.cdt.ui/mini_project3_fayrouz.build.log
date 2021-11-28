@@ -1,0 +1,20 @@
+18:05:38 **** Incremental Build of configuration Debug for project mini_project3_fayrouz ****
+make all 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 mini_project3_fayrouz.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    7774 bytes (47.4% Full)
+(.text + .data + .bootloader)
+
+Data:         10 bytes (1.0% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+18:05:39 Build Finished. 0 errors, 0 warnings. (took 333ms)
+

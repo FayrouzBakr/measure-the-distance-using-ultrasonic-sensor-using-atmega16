@@ -1,0 +1,34 @@
+22:38:22 **** Incremental Build of configuration Debug for project Challenge_Measure_Signal_Freq ****
+make all 
+Building file: ../measure_freq.c
+Invoking: AVR Compiler
+avr-gcc -Wall -g2 -gstabs -O0 -fpack-struct -fshort-enums -ffunction-sections -fdata-sections -std=gnu99 -funsigned-char -funsigned-bitfields -mmcu=atmega16 -DF_CPU=1000000UL -MMD -MP -MF"measure_freq.d" -MT"measure_freq.o" -c -o "measure_freq.o" "../measure_freq.c"
+Finished building: ../measure_freq.c
+ 
+Building target: Challenge_Measure_Signal_Freq.elf
+Invoking: AVR C Linker
+avr-gcc -Wl,-Map,Challenge_Measure_Signal_Freq.map -mmcu=atmega16 -o "Challenge_Measure_Signal_Freq.elf"  ./gpio.o ./icu.o ./lcd.o ./measure_freq.o   
+Finished building target: Challenge_Measure_Signal_Freq.elf
+ 
+Invoking: AVR Create Extended Listing
+avr-objdump -h -S Challenge_Measure_Signal_Freq.elf  >"Challenge_Measure_Signal_Freq.lss"
+Finished building: Challenge_Measure_Signal_Freq.lss
+ 
+Invoking: Print Size
+avr-size --format=avr --mcu=atmega16 Challenge_Measure_Signal_Freq.elf
+AVR Memory Usage
+----------------
+Device: atmega16
+
+Program:    8104 bytes (49.5% Full)
+(.text + .data + .bootloader)
+
+Data:         29 bytes (2.8% Full)
+(.data + .bss + .noinit)
+
+
+Finished building: sizedummy
+ 
+
+22:38:23 Build Finished. 0 errors, 0 warnings. (took 848ms)
+
